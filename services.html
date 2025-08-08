@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Services Booking</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+        <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+        <span class="brand-text">Pet Care & Rescue</span>
+    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="rescue.html">Rescue</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+      
+        <div class="min-h-screen">
+          <!-- Hero Section -->
+          <div class="hero">
+              <div class="hero-overlay">
+                  <div class="hero-content">
+                      <h1>Pet Care Services</h1>
+                      <p>Professional care for your beloved companions</p>
+                  </div>
+              </div>
+          </div>
+          
+        <main class="container">
+          <!-- Services Grid -->
+          <h2 class="section-title">Our Services</h2>
+          <div class="services-grid">
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="cat-and-dog-love-your-pet-day-banner-greeting-card-social-media-pink-background-photo.jpg" alt="Veterinary Care">
+                  </div>
+                  <div class="service-content">
+                      <div class="service-header">
+                          <h3>Veterinary Care❤️</h3>
+                      </div>
+                      <p>Complete health check-ups and medical treatments</p>
+                      <p class="price">⭐⭐⭐</p>
+                  </div>
+              </div>
+
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="beautiful-pet-portrait-dog_23-2149218454.avif" alt="Pet Grooming">
+                  </div>
+                  <div class="service-content">
+                      <div class="service-header">
+                          <h3>Pet Grooming✂️</h3>
+                      </div>
+                      <p>Professional grooming and spa services</p>
+                      <p class="price">⭐⭐⭐⭐</p>
+                  </div>
+              </div>
+
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pet Training">
+                  </div>
+                  <div class="service-content">
+                      <div class="service-header">
+                          <h3>Pet Training🎓</h3>
+                      </div>
+                      <p>Behavioral training and obedience classes</p>
+                      <p class="price">⭐⭐⭐</p>
+                  </div>
+              </div>
+
+              <div class="service-card">
+                  <div class="service-image">
+                      <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pet Boarding">
+                  </div>
+                  <div class="service-content">
+                      <div class="service-header">
+                          <h3>Pet Boarding🏠</h3>
+                      </div>
+                      <p>Safe and comfortable boarding facilities</p>
+                      ⭐⭐⭐
+                      <p class="price">40/day</p>
+                  </div>
+              </div>
+          </div>
+
+
+            <!-- Booking Form -->
+            <div class="booking-form">
+                <h2>Book an Appointment</h2>
+                <form id="appointmentForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="icon">👤</i>
+                                Full Name
+                            </label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="icon">✉️</i>
+                                Email
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="icon">📞</i>
+                                Phone Number
+                            </label>
+                            <div class="phone-input">
+                                <span class="phone-prefix">+91</span>
+                                <input type="tel" id="phone" placeholder="Enter mobile number" maxlength="11" pattern="[6-9][0-9]{9}">
+                              </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Select Service</label>
+                            <select id="service" name="service" required>
+                                <option value="veterinary">Veterinary Care</option>
+                                <option value="grooming">Pet Grooming</option>
+                                <option value="training">Pet Training</option>
+                                <option value="boarding">Pet Boarding</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">
+                                <i class="icon">📅</i>
+                                Preferred Date
+                            </label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">
+                                <i class="icon">⏰</i>
+                                Preferred Time
+                            </label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">
+                                <i class="icon">💬</i>
+                                Additional Notes
+                            </label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit" class="submit-button">Book Appointment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+            <h2>Feedback</h2>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">&#9733;</label>
+        
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">&#9733;</label>
+        
+                <input type="radio" id="star3" name="rating" value="3" checked> <!-- Predefined Rating -->
+                <label for="star3">&#9733;</label>
+        
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">&#9733;</label>
+        
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">&#9733;</label>
+            </div>
+                <form class="newsletter-form">
+                  <input type="Typing.." placeholder="send Feedback" />
+              <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="#top">Services</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Pet Street</li>
+            <li>Mumbai, Maharashtra 400053</li>
+            <li>Phone: +91 8104655483</li>
+            <li>Email: petcareandrescue.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pet Care & Rescue. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+    <script src="services.js"></script>
+</body>
+</html>

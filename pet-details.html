@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pet Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="pets.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            margin: 30px;
+            height: 600px;
+            border-radius: 30px;
+        }
+
+        .card img {
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .info-1 {
+            width: 69%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="brand">
+            <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+            <span class="brand-text">Pet Care & Rescue</span>
+        </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#adopt">Adopt</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="rescue.html">Rescue</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="card" style="width: 18rem;">
+            <img id="pet-image" src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h2 id="pet-name" class="card-title">Card title</h2>
+                <p id="pet-description" class="card-text">Some quick example text to build on the card title and make up
+                    the bulk of the card's content.</p>
+                <p id="pet-Breed"></p>
+            </div>
+        </div>
+        <div class="card info-1">
+            <h1>information</h1>
+            <p id="pet-info">loading...</p>
+            <h2>care instruction</h2>
+            <p id="pet-care">
+            </p>
+            <h2>Adoption process</h2>
+            <p>
+                <li>To adopt Ice Cube, follow these steps:</li>
+                <li>Fill out an adoption form on our website.</li>
+                <li>Schedule a meeting to interact with Ice Cube.</li>
+                <li>Sign the adoption agreement and provide necessary documentation.</li>
+                <li>Bring Ice Cube to his new home and give him all the love he deserves!</li>
+            </p>
+            <h2>contact info</h2>
+            <p>If you have any questions or need more details, please reach out to us:
+
+                <li>Email: petcareandrescue.com</li>
+                <li>Phone: +91 9321458563</li>
+                <li>Address: 123 Pet Care Street, Mumbai, Maharashtra 400053</li>
+            </p>
+        </div>
+    </main>
+    <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+            <h3>Feedback</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="send Feedback" />
+              <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Pet Street</li>
+            <li>Mumbai, Maharashtra 400053</li>
+            <li>Phone: +91 8104655483</li>
+            <li>Email: petcareandrescue.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pet Care & Rescue. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <script>
+        function getPetDetails() {
+            const params = new URLSearchParams(window.location.search);
+            const petId = parseInt(params.get("id"));
+
+            const pet = pets.find(p => p.id === petId);
+
+            if (pet) {
+                document.getElementById("pet-name").textContent = pet.name;
+                document.getElementById("pet-description").textContent = pet.description;
+                document.getElementById("pet-image").src = pet.imageUrl;
+                document.getElementById("pet-Breed").textContent = pet.breed;
+
+                // Updating dynamic sections
+                document.getElementById("pet-info").textContent = pet.information;
+                document.getElementById("pet-care").textContent = pet.care;
+                //document.getElementById("pet-adoption").textContent = pet.adoption;
+                //document.getElementById("pet-contact").textContent = pet.contact;
+            } else {
+                document.body.innerHTML = "<h2>Pet not found</h2>";
+            }
+        }
+
+        getPetDetails();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

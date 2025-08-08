@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Admin Dashboard</title>
+    <link rel="stylesheet" href="Admins.CSS">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="errorToast" class="error-toast"></div>
+    <div id="successToast" class="success-toast"></div>
+
+   
+        <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+        <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+        <span class="brand-text"></span>
+    </div>
+        <div class="nav-left">
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+        <div class="nav-center">
+            <h1>Pet Care & Rescue Admin</h1>
+        </div>
+        <div class="nav-right">
+            <div id="clockDisplay" class="clock"></div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <span class="icon">📊</span>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" data-section="appointments">
+                    <span class="icon">📅</span>
+                    Appointments
+                </a>
+                <a href="#" class="nav-item" data-section="rescue">
+                    <span class="icon">🚑</span>
+                    Rescue
+                </a>
+                <a href="#" class="nav-item" data-section="donations">
+                    <span class="icon">💝</span>
+                    Donations
+                </a>
+                <a href="#" class="nav-item" data-section="contacts">
+                    <span class="icon">📞</span>
+                    Contact Requests
+                </a>
+            </nav>
+            
+            <div class="user-profile">
+                <!-- Logout Button -->
+          <button id="logoutBtn" class="logout-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logout-icon">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" x2="9" y1="12" y2="12"></line>
+            </svg>
+            <a href="login.html" class="logout-w">
+                <span style="color: rgb(255, 254, 254); font-weight: bold;">Logout</span>
+
+            </a>
+            
+          </button>
+            </div>
+        </aside>
+
+        <main class="main-content" id="mainContent">
+            <div class="section" id="dashboard">
+                <h2>Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Appointments</h3>
+                        <p class="stat-number">24</p>
+                        <span class="trend positive">↑ 12%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Rescue Operations</h3>
+                        <p class="stat-number">15</p>
+                        <span class="trend positive">↑ 8%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Donations</h3>
+                        <p class="stat-number">$8,920</p>
+                        <span class="trend positive">↑ 15%</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Contact Requests</h3>
+                        <p class="stat-number">42</p>
+                        <span class="trend positive">↑ 23%</span>
+                    </div>
+                </div>
+
+                <div class="rescue-map-container">
+                    <h3>Live Rescue Operations</h3>
+                    <div id="rescueMap" class="rescue-map"></div>
+                </div>
+            </div>
+
+            <div class="section hidden" id="appointments">
+                <h2>Appointments</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Pet Name</th>
+                                <th> Service</th>
+                                <th>Mobile Number</th>
+                                <th>Notes</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="appointmentsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section hidden" id="rescue">
+                <h2>Rescue Operations</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Report ID</th>
+                                <th>Location</th>
+                                <th>Date</th>
+                                <th>Pet Type</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rescueTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section hidden" id="donations">
+                <h2>Donations</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Email ID</th>
+                                <th>Payment Method</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donationsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section hidden" id="contacts">
+                <h2>Contact Requests</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile</th>
+                                <th>Emergency</th>
+                                <th>Message</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contactsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Admins.JS"></script>
+</body>
+</html>

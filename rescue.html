@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pet Rescue Services - Help us save and rehome pets in need">
+  <title>Pet Rescue - Pet Care & Rescue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="rescue.css">
+</head>
+<body>
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="brand">
+        <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+        <span class="brand-text">Pet Care & Rescue</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="rescue.html">Rescue</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+  <!-- Hero Section -->
+  <section class="rescue-hero">
+    <div class="container">
+      <h1>Help Us Save Lives</h1>
+      <p>Join our mission to rescue and rehome pets in need</p>
+      <button class="cta-button" onclick="scrollToSection('report')">Report a Pet in Need</button>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">0</div>
+          <p>Pets Rescued</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="80">0</div>
+          <p>Successful Adoptions</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="5">0</div>
+          <p>Current Rescues</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="5">0</div>
+          <p>Partner Shelters</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="success-stories">
+    <div class="container">
+      <h2>Rescue Success Stories</h2>
+      <div class="stories-grid"></div>
+    </div>
+  </section>
+
+  <!-- Report Section -->
+  <section id="report" class="report-section">
+    <div class="container">
+      <h2>Report a Pet in Need</h2>
+      <div class="report-grid">
+        <div class="report-form">
+          <form id="rescueForm">
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" required placeholder="Where is the pet located?" readonly>
+              <button type="button" id="getLocationBtn" class="cta-button">Get Current Location</button>
+            </div>
+            <div class="form-group">
+              <label for="images">Upload Images/Videos</label>
+              <div class="file-upload-container">
+                <input type="file" id="images" accept="image/*,video/*" multiple>
+                <button type="button" class="add-more-btn" onclick="document.getElementById('images').click()">Add More Files</button>
+              </div>
+              <div id="image-preview" class="image-preview-container"></div>
+            </div>
+            <div class="form-group">
+              <label for="petType">Pet Type</label>
+              <select id="petType" required>
+                <option value="">Select pet type</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" required placeholder="Please describe the situation and condition of the pet"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contact">Your Contact Information</label>
+              <input type="text" id="contact" required placeholder="Your phone number or email">
+            </div>
+            <button type="submit" class="submit-button">Submit Report</button>
+          </form>
+        </div>
+        <div class="emergency-info">
+          <h3>Emergency Contact</h3>
+          <img src="emergencyimage.jpg"  style="width: 100%;height: auto;">
+
+          <p>For immediate assistance:</p>
+          <ul>
+            <li>Emergency Hotline: 093246 99829</li>
+            <li>Available 24/7</li>
+            <li>Response time: Under 30 minutes</li>
+          </ul>
+          <div class="emergency-note">
+            <p>If you find an injured pet that needs immediate medical attention, please call our emergency hotline immediately.</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Help Section -->
+  <section class="how-to-help">
+    <div class="container">
+      <h2>How You Can Help</h2>
+      <div class="help-grid">
+        <div class="help-card">
+          <h3>Volunteer</h3>
+          <p>Join our rescue team and help save pets in your area.</p>
+          <button onclick="window.location.href='#volunteer'">Learn More</button>
+        </div>
+        <div class="help-card">
+          <h3>Foster</h3>
+          <p>Provide a temporary home for pets waiting for adoption.</p>
+          <button onclick="window.location.href='#foster'">Learn More</button>
+        </div>
+        <div class="help-card">
+          <h3>Donate</h3>
+          <p>Support our rescue efforts with a donation.</p>
+          <button onclick="window.location.href='donate.html'">Donate Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h2>Feedback</h2>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">&#9733;</label>
+    
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">&#9733;</label>
+    
+            <input type="radio" id="star3" name="rating" value="3" checked> <!-- Predefined Rating -->
+            <label for="star3">&#9733;</label>
+    
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">&#9733;</label>
+    
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">&#9733;</label>
+        </div>
+            <form class="newsletter-form">
+              <input type="Typing.." placeholder="send Feedback" />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#top">Rescue</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Pet Street</li>
+            <li>Mumbai, Maharashtra 400053</li>
+            <li>Phone: +91 8104655483</li>
+            <li>Email: petcareandrescue.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pet Care & Rescue. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="rescue.js"></script>
+</body>
+</html>

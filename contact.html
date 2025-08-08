@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Pet Care & Rescue - Get in touch with us"
+    />
+    <title>Contact Us - Pet Care & Rescue</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+        <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+        <span class="brand-text">Pet Care & Rescue</span>
+    </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#adopt">Adopt</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="rescue.html">Rescue</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Get in Touch</h1>
+        <p>
+          We're here to help with all your pet-related questions and concerns
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="icon"><i class="bx bxs-phone"></i></div>
+            <h3>Phone</h3>
+            <p>Main: +91 9321458563</p>
+            <p>Emergency: 093246 99829</p>
+          </div>
+          <div class="info-card">
+            <div class="icon"><i class="bx bxl-gmail"></i></div>
+            <h3>Email</h3>
+            <p>petcareandrescue.com</p>
+            
+          </div>
+          <div class="info-card">
+            <div class="icon"><i class="bx bxs-edit-location"></i></div>
+            <h3>Location</h3>
+            <p>123 Pet Street</p>
+            <p>Mumbai, Maharashtra 400053</p>
+          </div>
+          <div class="info-card">
+            <div class="icon"><i class="bx bxs-stopwatch"></i></div>
+            <h3>Hours</h3>
+            <p>Mon-Fri: 8am - 8pm</p>
+            <p>Sat-Sun: 9am - 6pm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-grid">
+              <form id="contactForm" class="contact-form">
+                  <div class="form-group">
+                      <label for="name">Full Name</label>
+                      <input type="text" id="name" required placeholder="Enter your full name">
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email" required placeholder="Enter your email">
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" id="phone" placeholder="Enter mobile number" maxlength="10" pattern="[6-9][0-9]{9}">
+                  </div>
+                  <div class="form-group">
+                      <label for="emergency">Is this an emergency?</label>
+                      <select id="emergency" required>
+                          <option value="">Please select</option>
+                          <option value="yes">Yes - Urgent Care Needed</option>
+                          <option value="no">No - General Inquiry</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" required placeholder="Describe your pet's condition or your inquiry"></textarea>
+                  </div>
+                  <button type="submit" class="submit-btn">Send Message</button>
+              </form>
+
+              <div class="emergency-info">
+                  <h3>Emergency Contact</h3>
+                  <p class="emergency-phone">🚨 Emergency: 093246 99829-PETS</p>
+                  <p>Available 24/7 for urgent care</p>
+                  <div class="emergency-tips">
+                      <h4>Emergency Tips</h4>
+                      <ul>
+                          <li>Keep your pet warm and comfortable</li>
+                          <li>Monitor breathing and consciousness</li>
+                          <li>Don't give human medications</li>
+                          <li>Call ahead if possible</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+  <!-- Search Bar -->
+  <div id="search-container">
+    <h2>🐶 Pet Hospital Locator</h2>
+    <input type="text" id="search" placeholder="Enter a city (e.g., Mumbai,New Delhi,New York,etc.)" oninput="searchLocation()"/>
+</div>
+
+<!-- Google Map Embed -->
+<iframe id="google-map" src="https://www.google.com/maps?q=pet+hospital+in+Mumbai&output=embed"></iframe>
+
+
+<!-- Add this before closing body tag -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+
+<!-- Hospital List Section -->
+<section class="hospitals-section">
+    <div class="container">
+        <h2>Best Pets Directory</h2>
+        <div class="hospitals-grid" id="hospitalsList">
+            <!-- Hospital cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+</section>
+</main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>What are your adoption requirements?</h3>
+            <p>
+              We require a completed application, home visit, and reference
+              checks to ensure our pets go to loving homes.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How can I volunteer?</h3>
+            <p>
+              Fill out our volunteer application form and attend an orientation
+              session to get started.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Do you offer emergency services?</h3>
+            <p>
+              Yes, we provide 24/7 emergency veterinary care. Call our emergency
+              hotline at 093246 99829-PETS.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How can I make a donation?</h3>
+            <p>
+              You can donate online through our secure payment system or visit
+              our facility to make an in-person donation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h2>Feedback</h2>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5">
+              <label for="star5">&#9733;</label>
+      
+              <input type="radio" id="star4" name="rating" value="4">
+              <label for="star4">&#9733;</label>
+      
+              <input type="radio" id="star3" name="rating" value="3" checked> <!-- Predefined Rating -->
+              <label for="star3">&#9733;</label>
+      
+              <input type="radio" id="star2" name="rating" value="2">
+              <label for="star2">&#9733;</label>
+      
+              <input type="radio" id="star1" name="rating" value="1">
+              <label for="star1">&#9733;</label>
+          </div>
+              <form class="newsletter-form">
+                <input type="Typing.." placeholder="send Feedback" />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="#top">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>123 Pet Street</li>
+            <li>Mumbai, Maharashtra 400053</li>
+            <li>Phone: +91 8104655483</li>
+            <li>Email: petcareandrescue.com</li>
+            </ul>
+          </div>
+         
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Pet Care & Rescue. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

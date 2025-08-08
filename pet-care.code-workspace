@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../src/src"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pet-care"
+	}
+}

@@ -1,0 +1,344 @@
+/* Rescue Page Specific Styles */
+.rescue-hero {
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('woman-playing-with-rescue-dogs-shelter_23-2148682984.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  margin-top: 4rem;
+}
+
+.rescue-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.rescue-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+}
+
+/* Statistics Section */
+.stats {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-card {
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Success Stories */
+.success-stories {
+  padding: 4rem 0;
+  background: var(--bg-light);
+}
+
+.success-stories h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.story-card {
+  background: var(--white);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 1.5rem;
+}
+
+.story-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.story-content .date {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Report Section */
+.report-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.report-form {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Location button styles */
+#getLocationBtn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.submit-button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background: var(--primary-dark);
+}
+
+.emergency-info {
+  background: #fee2e2;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.emergency-info h3 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.emergency-info ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.emergency-info li {
+  margin-bottom: 0.5rem;
+}
+
+.emergency-note {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border-left: 4px solid #dc2626;
+}
+
+/* How to Help Section */
+.how-to-help {
+  padding: 4rem 0;
+  background: var(--bg-light);
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.help-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+}
+
+.help-card h3 {
+  margin-bottom: 1rem;
+}
+
+.help-card p {
+  margin-bottom: 1.5rem;
+}
+
+.help-card button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.help-card button:hover {
+  background: var(--primary-dark);
+}
+
+/* File Upload Styles */
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.add-more-btn {
+  margin-left: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-more-btn:hover {
+  background: var(--primary-dark);
+}
+
+.image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preview-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background: rgba(255, 0, 0, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rescue-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .rescue-hero p {
+    font-size: 1.2rem;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-info {
+    order: -1;
+  }
+}

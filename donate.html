@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate to Pet Care & Rescue - Help us save more pets">
+  <title>Donate - Pet Care & Rescue</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+        <img src="imageedit_3_6157087019.png" alt="Pet Care and Rescue Logo" class="nav-logo">
+        <span class="brand-text">Pet Care & Rescue</span>
+    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="rescue.html">Rescue</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Donate Hero Section -->
+  <section class="donate-hero">
+    <div class="container">
+      <h1>Make a Difference Today</h1>
+      <p>Your donation helps us rescue, rehabilitate, and rehome pets in need</p>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <div class="container">
+      <h2>Your Impact</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-number">500</div>
+          <p>Provides food for a rescued pet for one month</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">1,000</div>
+          <p>Covers basic medical check-up and vaccinations</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">2,000</div>
+          <p>Sponsors emergency medical treatment</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number">5,000</div>
+          <p>Funds rescue operations and transportation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Form Section -->
+  <section class="donation-form-section">
+    <div class="container">
+      <div class="form-container">
+        <div class="step-indicator">
+          <div class="step active"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+        </div>
+        
+        <h2>Make a Donation</h2>
+        <form id="donationForm" class="donation-form">
+          <!-- Donor Information -->
+           <h1>Your Information</h1>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+          </div>
+
+          <!-- Amount Selection -->
+          <h3>Select Amount</h3>
+          <div class="amount-buttons">
+            <button type="button" class="amount-btn" data-amount="500">₹500</button>
+            <button type="button" class="amount-btn" data-amount="1000">₹1,000</button>
+            <button type="button" class="amount-btn" data-amount="2000">₹2,000</button>
+            <button type="button" class="amount-btn" data-amount="5000">₹5,000</button>
+          </div>
+          <div class="form-group">
+            <label for="customAmount">Custom Amount</label>
+            <input type="number" id="customAmount" placeholder="Enter amount" min="100">
+          </div>
+          
+          <!-- Payment Methods Section -->
+          <div class="payment-methods">
+            <h3>Select Payment Method</h3>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="upi" checked>
+                <div class="payment-content">
+                  <div class="payment-icon">📱</div>
+                  <span class="payment-label">UPI</span>
+                </div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="qr">
+                <div class="payment-content">
+                  <div class="payment-icon">📲</div>
+                  <span class="payment-label">QR Code</span>
+                </div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="card">
+                <div class="payment-content">
+                  <div class="payment-icon">💳</div>
+                  <span class="payment-label">Card</span>
+                </div>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="netbanking">
+                <div class="payment-content">
+                  <div class="payment-icon">🏦</div>
+                  <span class="payment-label">Net Banking</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Payment Details -->
+            <div id="upiDetails" class="payment-details">
+              <div class="form-group">
+                <label for="upiId">UPI ID</label>
+                <input type="text" id="upiId" placeholder="Enter your UPI ID (e.g., name@upi)">
+              </div>
+              <div class="upi-info">
+                <p>Our UPI ID: petcare@upi</p>
+                <small>You can also scan the QR code below to pay via any UPI app</small>
+              </div>
+            </div>
+
+            <div id="qrDetails" class="payment-details" style="display: none;">
+              <div class="qr-container">
+                <img src="QR.jpeg" 
+                     alt="Payment QR Code" 
+                     class="qr-code">
+                <p>Scan this QR code using any UPI app to make the payment</p>
+              </div>
+            </div>
+
+            <div id="cardDetails" class="payment-details" style="display: none;">
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+              </div>
+              <div class="card-row">
+                <div class="form-group">
+                  <label for="expiryDate">Expiry Date</label>
+                  <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV</label>
+                  <input type="password" id="cvv" placeholder="123" maxlength="3">
+                </div>
+              </div>
+            </div>
+
+            <div id="netbankingDetails" class="payment-details" style="display: none;">
+              <div class="bank-details">
+                <h4>Select Your Bank</h4>
+                <div class="bank-list">
+                  <label class="bank-option">
+                    <input type="radio" name="bank" value="sbi">
+                    <span>State Bank of India</span>
+                  </label>
+                  <label class="bank-option">
+                    <input type="radio" name="bank" value="hdfc">
+                    <span>HDFC Bank</span>
+                  </label>
+                  <label class="bank-option">
+                    <input type="radio" name="bank" value="icici">
+                    <span>ICICI Bank</span>
+                  </label>
+                  <label class="bank-option">
+                    <input type="radio" name="bank" value="axis">
+                    <span>Axis Bank</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="donate-button">Complete Donation</button>
+        </form>
+      </div>
+
+      <div class="donation-sidebar">
+        <div class="why-donate">
+          <h3>Why Donate?</h3>
+          <ul>
+            <img src="illustration-charity-support_53876-9189.avif" style="width: 90% ;height: auto;">
+            <li>100% of donations go directly to pet care</li>
+            <li>Tax-deductible contributions</li>
+            <li>Regular updates on impact</li>
+            <li>Support local rescue operations</li>
+          </ul>
+        </div>
+      
+        <div class="donation-contact">
+          <h3>Questions?</h3><ul>
+          <img src="cute-animals-group-white-background_23-2150038562.avif" style="width: 100%;height: auto;">          
+          <p>Contact our donation team:</p>
+          <p>📧 petcareandrescue.com</p>
+          <p>📞 9321458563 ext. 2</p>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Ways to Help -->
+  <section class="other-ways">
+    <div class="container">
+      <h2>Other Ways to Help</h2>
+      <div class="ways-grid">
+        <div class="way-card">
+          <h3>Volunteer</h3>
+          <p>Join our team of dedicated volunteers who help care for rescued pets.</p>
+          <a href="contact.html" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="way-card">
+          <h3>Foster</h3>
+          <p>Provide a temporary home for pets waiting for their forever families.</p>
+          <a href="contact.html" class="btn-secondary">Become a Foster</a>
+        </div>
+        <div class="way-card">
+          <h3>Sponsor</h3>
+          <p>Sponsor a specific pet or program to make a targeted impact.</p>
+          <a href="contact.html" class="btn-secondary">Sponsor Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h2>Feedback</h2>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">&#9733;</label>
+    
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">&#9733;</label>
+    
+            <input type="radio" id="star3" name="rating" value="3" checked> <!-- Predefined Rating -->
+            <label for="star3">&#9733;</label>
+    
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">&#9733;</label>
+    
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">&#9733;</label>
+        </div>
+            <form class="newsletter-form">
+              <input type="Typing.." placeholder="send Feedback" />
+              <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="#top">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Pet Street</li>
+            <li>Mumbai, Maharashtra 400053</li>
+            <li>Phone: +91 8104655483</li>
+            <li>Email: petcareandrescue.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pet Care & Rescue. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="donate.js"></script>
+</body>
+</html>
